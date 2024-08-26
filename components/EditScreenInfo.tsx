@@ -7,7 +7,9 @@ import { Text, View } from './Themed';
 
 import Colors from '@/constants/Colors';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+type pathParam = { path: string }
+
+export default function EditScreenInfo({ path }: pathParam) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -33,7 +35,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
         </Text>
       </View>
 
-      <View style={styles.helpContainer}>
+      {/* <View style={styles.helpContainer}>
         <ExternalLink
           style={styles.helpLink}
           href="https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet">
@@ -41,7 +43,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
             Tap here if your app doesn't automatically update after making changes
           </Text>
         </ExternalLink>
-      </View>
+      </View> */}
     </View>
   );
 }
